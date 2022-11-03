@@ -1,1 +1,1 @@
-# node_training
+Node Training hard
