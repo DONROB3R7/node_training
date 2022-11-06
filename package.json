@@ -1,0 +1,24 @@
+{
+  "name": "node_training",
+  "version": "1.0.0",
+  "description": "Node Training hard",
+  "main": "buffe.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DONROB3R7/node_training.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DONROB3R7/node_training/issues"
+  },
+  "homepage": "https://github.com/DONROB3R7/node_training#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  }
+}
