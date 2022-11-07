@@ -1,11 +1,35 @@
 const http = require('http');
+const fs = require('fs');
 
 const server = http.createServer((req, res) => {
     console.log(req.url, req.method);
-    res.write('<head><link rel="styleseet" href="#"/></head>')
-    res.write('<p>Hello, ninja</p>');
-    res.write('<p>Hello ninja again</p>');
-    res.end();
+
+    // set header content  type 
+    res.setHeader('Content-Type', 'text/html');
+    
+    let path = './views';
+
+    switch(req.url){
+        case '/':
+            path += 'index.html';
+            break;
+        case 'about':
+            path += 'about.html';
+            break;
+        default: 
+            path += '404.'       
+    }
+
+
+    fs.readFile('./views/index.html', (err,data) => {
+        if(err){
+            console.log(err);
+            res.end();
+        } else{ 
+            //res.write(data);
+            res.end(data);
+        }
+    })
 });
 
 server.listen(3000, 'localhost', () => {
